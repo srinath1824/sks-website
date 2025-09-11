@@ -11,18 +11,18 @@ const LazySection: React.FC<LazySectionProps> = ({
   className = '',
   fallback = <div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div></div>
 }) => {
-  const [isInView, setIsInView] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsLoaded(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '100px' }
+      { threshold: 0.01, rootMargin: '25px' }
     );
 
     if (sectionRef.current) {
@@ -34,7 +34,7 @@ const LazySection: React.FC<LazySectionProps> = ({
 
   return (
     <div ref={sectionRef} className={className}>
-      {isInView ? children : fallback}
+      {isLoaded ? children : fallback}
     </div>
   );
 };

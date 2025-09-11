@@ -1,7 +1,12 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import LazySection from './components/LazySection';
+import SEO from './components/SEO';
+import { kundaliniFAQSchema, organizationSchema } from './data/structuredData';
+import { preloadCriticalResources } from './utils/performance';
+import { preloadCriticalImages } from './utils/imageCache';
 
 // Lazy load components
 const About = lazy(() => import('./components/About'));
@@ -15,8 +20,20 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
+  useEffect(() => {
+    preloadCriticalResources();
+    preloadCriticalImages();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <HelmetProvider>
+      <SEO 
+        title="Siva Kundalini Sadhana - Awaken Your Kundalini Energy Safely | Free Online Classes"
+        description="Transform your life through authentic Kundalini awakening practices. Learn safe techniques, understand symptoms, and experience spiritual transformation under enlightened guidance. Join free online classes."
+        keywords="kundalini awakening, kundalini energy, spiritual awakening, kundalini yoga, meditation, chakra activation, kundalini symptoms, kundalini dangers, safe kundalini practices, siva kundalini sadhana, jeeveswara yogi"
+        structuredData={[organizationSchema]}
+      />
+      <div className="min-h-screen bg-white">
       <Header />
       <Hero />
       <LazySection>
@@ -64,7 +81,8 @@ function App() {
           <Footer />
         </Suspense>
       </LazySection>
-    </div>
+      </div>
+    </HelmetProvider>
   );
 }
 

@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden pb-8 sm:pb-0"
     >
       <div className="absolute inset-0">
         <LazyImage 
@@ -26,31 +26,33 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-8">
-          <Sparkles className="h-16 w-16 text-white mx-auto mb-4 animate-pulse" />
+          <Sparkles className="h-16 w-16 text-white mx-auto mb-4 animate-pulse" aria-hidden="true" />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Awaken Your
+            <span className="sr-only">Siva Kundalini Sadhana - </span>Awaken Your
             <span className="block text-white">
-              Kundalini Energy
+              Kundalini Energy Safely
             </span>
           </h1>
         </div>
 
         <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
-          Transform your life through the sacred science of Kundalini Sadhana and unlock your inner power. Journey from human consciousness to divine consciousness under the guidance of our enlightened Guru. 
+          Transform your life through the sacred science of <strong>Kundalini Sadhana</strong> and unlock your inner power. Experience safe <strong>Kundalini awakening</strong> techniques, understand <strong>chakra activation</strong>, and journey from human consciousness to divine consciousness under the guidance of our enlightened Guru <strong>Parama Pujya Sree Jeeveswara Yogi</strong>.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
           <button 
             onClick={() => scrollToSection('courses')}
-            className="group bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2"
+            className="group bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 w-full sm:w-auto justify-center"
+            aria-label="Navigate to free Kundalini classes section"
           >
             <span>Join FREE Kundalini Classes</span>
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true" />
           </button>
           
           <button 
             onClick={() => scrollToSection('knowledge')}
-            className="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300"
+            className="group border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 w-full sm:w-auto justify-center"
+            aria-label="Navigate to Kundalini knowledge section"
           >
             Learn About Kundalini
           </button>

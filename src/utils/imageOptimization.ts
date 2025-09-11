@@ -1,11 +1,11 @@
 // Image optimization utilities
-export const getOptimizedImageUrl = (url: string, width?: number, height?: number, quality = 80) => {
+export const getOptimizedImageUrl = (url: string, width = 400, height = 300, quality = 60) => {
   // For external URLs (Pexels, etc.), add optimization parameters
   if (url.includes('pexels.com')) {
     const baseUrl = url.split('?')[0];
     const params = new URLSearchParams();
-    if (width) params.set('w', width.toString());
-    if (height) params.set('h', height.toString());
+    params.set('w', width.toString());
+    params.set('h', height.toString());
     params.set('auto', 'compress');
     params.set('cs', 'tinysrgb');
     params.set('fit', 'crop');

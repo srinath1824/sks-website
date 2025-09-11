@@ -53,7 +53,7 @@ const Courses = () => {
   ];
 
   return (
-    <section id="courses" className="py-20 bg-gradient-to-b from-orange-50 to-white">
+    <section id="courses" className="pb-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -72,9 +72,9 @@ const Courses = () => {
             <h3 className="text-3xl font-bold text-gray-900">Online Courses</h3>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
             {onlineCourses.map((course, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 flex flex-col h-full">
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 flex flex-col h-full mx-auto w-full max-w-sm">
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="text-center mb-4">
                     <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block mb-3">
@@ -94,7 +94,8 @@ const Courses = () => {
           <div className="text-center mt-12 mb-20">
           <button 
             onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdU0NsweV8vBb7NFgxc-0p8Sr2Do0SSCOqulGZcFC8VRnzWng/viewform', '_blank')}
-            className="bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-200"
+            className="bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+            aria-label="Open registration form for free Kundalini classes in new tab"
           >
             Join FREE Kundalini Classes
           </button>
@@ -108,9 +109,9 @@ const Courses = () => {
             <h3 className="text-3xl font-bold text-gray-900">Residential Courses</h3>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {residentialCourses.map((course, index) => (
-              <div key={index} className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl text-white p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div key={index} className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl text-white p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <LazyImage 
                   src={course.image} 
                   alt={course.title}
@@ -133,7 +134,8 @@ const Courses = () => {
             </p>
             <button 
               onClick={() => window.open('https://wa.me/+917801046111', '_blank')}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              aria-label="Open WhatsApp chat in new tab"
             >
               Chat with us
             </button>

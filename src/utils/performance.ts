@@ -29,19 +29,9 @@ export const throttle = <T extends (...args: any[]) => void>(
 
 // Preload critical resources
 export const preloadCriticalResources = () => {
-  // Preload critical images
-  const criticalImages = [
-    '/images/SKS_Logo_4K-1.png',
-    '/images/Meet_our_Spiritual_Guru.jpg'
-  ];
-
-  criticalImages.forEach(src => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
+  // Only preload hero image
+  const img = new Image();
+  img.src = '/images/SKS_Logo_4K-1.png';
 };
 
 // Optimize scroll performance

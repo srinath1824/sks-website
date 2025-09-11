@@ -53,7 +53,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-orange-50">
+    <section id="gallery" className="pb-20 bg-gradient-to-b from-white to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -72,7 +72,7 @@ const Gallery = () => {
             <h3 className="text-2xl font-bold text-gray-900">Sacred Gallery</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {images.map((image, index) => (
               <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <LazyImage 
@@ -94,9 +94,9 @@ const Gallery = () => {
             <h3 className="text-2xl font-bold text-gray-900">Sadhaks Experiences</h3>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
+              <div key={index} className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
                 <div className="flex items-center mb-4">
                   <LazyImage 
                     src={testimonial.image}
@@ -114,7 +114,9 @@ const Gallery = () => {
                 </p>
                 <button
                   onClick={() => setExpandedTestimonial(expandedTestimonial === index ? null : index)}
-                  className="text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors duration-200"
+                  className="text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                  aria-expanded={expandedTestimonial === index}
+                  aria-label={expandedTestimonial === index ? `Collapse ${testimonial.name}'s testimonial` : `Expand ${testimonial.name}'s testimonial`}
                 >
                   {expandedTestimonial === index ? 'Read Less' : 'Read More'}
                 </button>

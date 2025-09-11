@@ -131,7 +131,7 @@ const YouTubeVideos = () => {
   };
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-left mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
