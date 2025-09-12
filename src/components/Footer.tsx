@@ -21,8 +21,7 @@ const Footer = () => {
               <span className="text-2xl font-bold">Siva Kundalini Sadhana</span>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-              Transforming human consciousness to Siva Kundalini Sadhana through the sacred science of Kundalini Sadhana. 
-              Join our global community of awakened souls.
+              Siva Kundalini Sadhana (SKS) is a non-profit organization founded by Parama Pujya Gurudev Sri Jeeveswara Yogi, with a divine purpose of transforming every human life into a healthy and blissful journey towards self-realisation, through simple, safe and powerful Siva Kundalini Sadhana.
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4" role="list" aria-label="Social media links">
               <a href="https://www.facebook.com/SivaKundaliniSadhana" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Visit our Facebook page">
@@ -99,9 +98,15 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Siva Kundalini Sadhana Organization. All rights reserved.
+              © 2025 Siva Kundalini Sadhana Foundation. All rights reserved.
             </p>
           </div>
+        </div>
+
+        <div className="text-center mt-8 pt-8 border-t border-gray-800">
+          <p className="text-gray-400 text-sm italic">
+            “You are already enlightened, just realize it.” -Parama Sri Jeeveswara Yogi
+          </p>
         </div>
       </div>
     </footer>

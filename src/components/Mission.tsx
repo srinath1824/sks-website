@@ -24,11 +24,9 @@ const Mission = () => {
               <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
             </div>
             <p className="text-gray-600 leading-relaxed mb-6">
-              A world where every human being realizes their divine potential and lives in complete harmony with 
-              cosmic consciousness. We envision communities of awakened souls spreading light, love, and wisdom 
-              across the planet.
+              "To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.”
             </p>
-            <ul className="space-y-3 text-gray-600">
+            {/* <ul className="space-y-3 text-gray-600">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                 Global spiritual awakening
@@ -41,7 +39,7 @@ const Mission = () => {
                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                 Planetary healing through individual transformation
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 text-white shadow-lg">
@@ -50,10 +48,9 @@ const Mission = () => {
               <h3 className="text-2xl font-bold">Our Mission</h3>
             </div>
             <p className="text-orange-100 leading-relaxed mb-6">
-              To provide authentic, systematic, and safe Kundalini awakening practices that transform human 
-              consciousness while preserving the ancient wisdom in its purest form for future generations.
+              To guide the transformation of human consciousness (Jeeva) into divine consciousness (Shiva) — helping individuals move beyond limitations of the ego and awaken to higher awareness, inner peace, and oneness with the universal Self.
             </p>
-            <ul className="space-y-3 text-orange-100">
+            {/* <ul className="space-y-3 text-orange-100">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-orange-200 rounded-full mr-3"></div>
                 Authentic spiritual education
@@ -66,7 +63,7 @@ const Mission = () => {
                 <div className="w-2 h-2 bg-orange-200 rounded-full mr-3"></div>
                 Building a global spiritual community
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

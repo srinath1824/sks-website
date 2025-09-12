@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Siva Kundalini Sadhana - Awaken Your Kundalini Energy Safely",
+  title = "Siva Kundalini Sadhana - Awaken Your Kundalini Energy",
   description = "Transform your life through authentic Kundalini awakening practices. Learn safe techniques, understand symptoms, and experience spiritual transformation under enlightened guidance.",
   keywords = "kundalini awakening, kundalini energy, spiritual awakening, kundalini yoga, meditation, chakra activation, kundalini symptoms, kundalini dangers, safe kundalini practices",
   canonical = "https://sivakundalini.org",

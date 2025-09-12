@@ -32,7 +32,7 @@ const Gallery = () => {
       title: 'Migraine-Free After 15 Years!',
       shortQuote: 'Dr. Ravali, a medical practitioner from Hyderabad, battled severe migraines for over 15 years. Life became a constant struggle… until she met Parama Pujya Sree Jeeveswara Yogi.',
       fullQuote: 'Dr. Ravali, a medical practitioner from Hyderabad, battled severe migraines for over 15 years. Life became a constant struggle… until she met Parama Pujya Sree Jeeveswara Yogi 🙏 After attending Level 5 and receiving Shaktipatam during Mahashivaratri 2023 in Siva Kundalini Ashram, everything changed. She felt a divine shower of white energy flow through her — and healing began. Within 4 months, 90% of her migraines disappeared. Today, she lives an energetic, pain-free life — something she once thought was impossible. "He is not just a human… He is a DIVINE being."',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
+      // image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
     },
     {
       name: 'Chandra Mohan',
@@ -40,7 +40,7 @@ const Gallery = () => {
       title: 'Kalpataru gave sadhak Financial Freedom',
       shortQuote: 'Chandra Mohan, a software professional from Hyderabad, discovered Pujya Jeeveswara Yogi on YouTube and began his spiritual journey with SKS.',
       fullQuote: 'Chandra Mohan, a software professional from Hyderabad, discovered Pujya Jeeveswara Yogi on YouTube and began his spiritual journey with SKS. During Level-1, his Sushmna Nadi activated — a life-changing miracle! After completing all online levels, Chandra Mohan attended the Kalpataru Workshop conducted by Gurudev, learning powerful techniques for healing and manifestation. At that time, he was struggling with a huge debt of ₹10 lakhs, and banks refused to sanction his loans. Using the Kalpataru technique, he manifested a breakthrough — his loans were approved within just 3 days of approaching the bank, granting him complete financial freedom. 🙏 Chandra Mohan expresses his heartfelt gratitude to Gurudev for transforming his life.',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
+      // image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
     },
     {
       name: 'Anjali',
@@ -48,7 +48,7 @@ const Gallery = () => {
       title: 'Kalpataru Miracle: My Son Spoke Within 3 Days',
       shortQuote: 'Anjali, a Sadhak from Bangalore, was heartbroken when her son was diagnosed with a speech delay disorder.',
       fullQuote: 'Anjali, a Sadhak from Bangalore, was heartbroken when her son was diagnosed with a speech delay disorder. Despite visiting top hospitals and specialists, she was told there was no medical cure. Guided to explore holistic healing, she came across a video of a miraculous recovery—where a child with a hole in the heart (ASD) was healed by the divine grace of Parama Pujya Sree Jeeveswara Yogi. Inspired, Anjali joined the SKS Level 1 course and later attended the Kalpataru session by Pujya Gurudev—renowned as the fastest and safest healing and manifestation technique. With deep faith, she applied the technique to her son. In just 3 days, to her astonishment, he spoke his first words: "ball," "bat," and "cat." After 8 months of despair, she finally witnessed a miracle. With heartfelt gratitude, she says: "I am forever indebted to Gurudev and surrender my life at HIS feet."',
-      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
+      // image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
     }
   ];
 
@@ -98,11 +98,11 @@ const Gallery = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
                 <div className="flex items-center mb-4">
-                  <LazyImage 
+                  {/* <LazyImage 
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
+                  /> */}
                   <div>
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                     <p className="text-sm text-gray-500">{testimonial.location}</p>

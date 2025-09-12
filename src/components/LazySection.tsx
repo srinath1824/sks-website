@@ -22,7 +22,7 @@ const LazySection: React.FC<LazySectionProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.01, rootMargin: '25px' }
+      { threshold: 0.01, rootMargin: '300px' }
     );
 
     if (sectionRef.current) {
@@ -34,7 +34,7 @@ const LazySection: React.FC<LazySectionProps> = ({
 
   return (
     <div ref={sectionRef} className={className}>
-      {isLoaded ? children : fallback}
+      {isLoaded ? children : <div className="min-h-[400px] flex items-center justify-center">{fallback}</div>}
     </div>
   );
 };

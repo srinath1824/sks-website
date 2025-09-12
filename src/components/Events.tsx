@@ -18,14 +18,14 @@ const Events = () => {
       date: 'July 2025',
       // participants: '100 pilgrims',
       description: 'A day of gratitude and reverence—honoring Gurudev on Guru Poornima and his Janmadinam.',
-      image: 'images/Guru Poornima.JPG'
+      image: 'images/GuruPoornima_2025.jpg'
     },
     {
       title: 'MahaSivaratri 2025',
       date: 'February 2025',
       participants: '5000+ global attendees',
       description: 'A Night of Spiritual Awakening, devotion, and union with the Divine.',
-      image: 'images/MahaSivaratri.jpg'
+      image: 'images/MahaSivaratri_2025.jpg'
     }
   ];
 
@@ -63,10 +63,10 @@ const Events = () => {
                     <p className="text-sm text-gray-200 mb-2">{event.description}</p>
                     <div className="flex justify-between items-center text-xs">
                       <span>{event.date}</span>
-                      <span className="flex items-center">
+                      {/* <span className="flex items-center">
                         <Users className="h-3 w-3 mr-1" />
                         {event.participants}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>

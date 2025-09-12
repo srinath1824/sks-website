@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { getOptimizedImageUrl } from '../utils/imageOptimization';
 import { getCachedImage } from '../utils/imageCache';
+import { markAsLoaded, isAlreadyLoaded } from '../utils/scrollCache';
 
 interface LazyImageProps {
   src: string;
@@ -19,11 +20,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    // Check if already loaded in scroll cache
+    if (isAlreadyLoaded(src)) {
+      setIsLoaded(true);
+      setIsInView(true);
+      return;
+    }
+
     // Check if image is already cached
     const cachedImg = getCachedImage(src);
     if (cachedImg) {
       setIsLoaded(true);
       setIsInView(true);
+      markAsLoaded(src);
       return;
     }
 
@@ -35,7 +44,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.01, rootMargin: '100px' }
+      { threshold: 0.01, rootMargin: '400px' }
     );
 
     if (imgRef.current) {
@@ -62,6 +71,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         onLoad={() => {
           setIsLoaded(true);
           setIsLoading(false);
+          markAsLoaded(src);
         }}
         onError={() => {
           setIsLoaded(true);

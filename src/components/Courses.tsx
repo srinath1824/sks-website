@@ -126,7 +126,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Your Transformation Today</h3>
             <p className="text-gray-600 mb-6">
@@ -140,7 +140,7 @@ const Courses = () => {
               Chat with us
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

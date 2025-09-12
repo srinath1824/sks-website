@@ -24,13 +24,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/60 via-orange-600/50 to-orange-700/60"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-0">
         <div className="mb-8">
           <Sparkles className="h-16 w-16 text-white mx-auto mb-4 animate-pulse" aria-hidden="true" />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
             <span className="sr-only">Siva Kundalini Sadhana - </span>Awaken Your
             <span className="block text-white">
-              Kundalini Energy Safely
+              Kundalini Energy
             </span>
           </h1>
         </div>

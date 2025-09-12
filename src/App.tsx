@@ -28,7 +28,7 @@ function App() {
   return (
     <HelmetProvider>
       <SEO 
-        title="Siva Kundalini Sadhana - Awaken Your Kundalini Energy Safely | Free Online Classes"
+        title="Siva Kundalini Sadhana - Awaken Your Kundalini Energy | Free Online Classes"
         description="Transform your life through authentic Kundalini awakening practices. Learn safe techniques, understand symptoms, and experience spiritual transformation under enlightened guidance. Join free online classes."
         keywords="kundalini awakening, kundalini energy, spiritual awakening, kundalini yoga, meditation, chakra activation, kundalini symptoms, kundalini dangers, safe kundalini practices, siva kundalini sadhana, jeeveswara yogi"
         structuredData={[organizationSchema]}
