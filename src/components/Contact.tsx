@@ -38,7 +38,7 @@ const Contact = () => {
             <span className="text-orange-500"> Spiritual Journey</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your life? Connect with us to start your journey toward Siva Kundalini Sadhana.
+            Ready to transform your life? Connect with us to start your journey with Siva Kundalini Sadhana.
           </p>
         </div>
 

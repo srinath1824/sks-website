@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="text-2xl font-bold">Siva Kundalini Sadhana</span>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-              Siva Kundalini Sadhana (SKS) is a non-profit organization founded by Parama Pujya Gurudev Sri Jeeveswara Yogi, with a divine purpose of transforming every human life into a healthy and blissful journey towards self-realisation, through simple, safe and powerful Siva Kundalini Sadhana.
+              Siva Kundalini Sadhana (SKS) is a non-profit organization founded by Parama Pujya Sree Jeeveswara Yogi, with a divine purpose of transforming every human life into a healthy and blissful journey towards self-realisation, through simple, safe and powerful Siva Kundalini Sadhana.
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4" role="list" aria-label="Social media links">
               <a href="https://www.facebook.com/SivaKundaliniSadhana" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-lg hover:bg-orange-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Visit our Facebook page">
