@@ -53,7 +53,7 @@ const Courses = () => {
   ];
 
   return (
-    <section id="courses" className="pb-20 bg-gradient-to-b from-orange-50 to-white">
+    <section id="courses" className="pt-24 sm:pt-20 pb-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">

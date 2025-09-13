@@ -17,11 +17,27 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
+    
+    // Force load all lazy sections first
+    const allSections = document.querySelectorAll('section');
+    allSections.forEach(section => {
+      if (section.getBoundingClientRect().top < window.innerHeight * 2) {
+        // Trigger intersection observer for nearby sections
+      }
+    });
+    
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const headerHeight = 80;
+        const elementPosition = element.offsetTop - headerHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 200);
   };
 
   const navItems = [

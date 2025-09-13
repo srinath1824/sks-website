@@ -2,9 +2,8 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import LazySection from './components/LazySection';
 import SEO from './components/SEO';
-import { kundaliniFAQSchema, organizationSchema } from './data/structuredData';
+import { organizationSchema } from './data/structuredData';
 import { preloadCriticalResources } from './utils/performance';
 import { preloadCriticalImages } from './utils/imageCache';
 
@@ -36,51 +35,33 @@ function App() {
       <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <About />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Journey />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <KundaliniKnowledge />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Courses />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Events />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Gallery />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Mission />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Contact />
-        </Suspense>
-      </LazySection>
-      <LazySection>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
-          <Footer />
-        </Suspense>
-      </LazySection>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <About />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Journey />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <KundaliniKnowledge />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Courses />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Events />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Gallery />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Mission />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Contact />
+      </Suspense>
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>}>
+        <Footer />
+      </Suspense>
       </div>
     </HelmetProvider>
   );

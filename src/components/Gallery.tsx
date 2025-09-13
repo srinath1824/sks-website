@@ -16,10 +16,10 @@ const Gallery = () => {
       url: '/images/Gallery3.jpg'
     },
     {
-      url: '/images/Gallery4.jpg'
+      url: '/images/Gallery9.jpeg'
     },
     {
-      url: '/images/Gallery5.jpg'
+      url: '/images/Gallery10.jpeg'
     },
     {
       url: '/images/Gallery6.jpg'
@@ -53,7 +53,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="pb-20 bg-gradient-to-b from-white to-orange-50">
+    <section id="gallery" className="pt-24 sm:pt-20 pb-20 bg-gradient-to-b from-white to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">

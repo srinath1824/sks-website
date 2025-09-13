@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pb-20 bg-gradient-to-b from-white to-orange-50">
+    <section id="contact" className="pt-24 sm:pt-20 pb-20 bg-gradient-to-b from-white to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -49,29 +49,29 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Connect With Us</h3>
               
               <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
-                <div className="flex flex-col items-center text-center min-w-[200px]">
+                <a href="mailto:sivakundalini@gmail.com" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
                   <div className="bg-orange-100 p-4 rounded-xl mb-3">
                     <Mail className="h-6 w-6 text-orange-500" />
                   </div>
                   <h4 className="font-semibold text-gray-900 text-base mb-1">Email Us</h4>
                   <p className="text-gray-600 text-sm">sivakundalini@gmail.com</p>
-                </div>
+                </a>
 
-                <div className="flex flex-col items-center text-center min-w-[200px]">
+                <a href="tel:+917801046111" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
                   <div className="bg-orange-100 p-4 rounded-xl mb-3">
                     <Phone className="h-6 w-6 text-orange-500" />
                   </div>
                   <h4 className="font-semibold text-gray-900 text-base mb-1">Call Us</h4>
                   <p className="text-gray-600 text-sm">+91 78010 46111</p>
-                </div>
+                </a>
 
-                <div className="flex flex-col items-center text-center min-w-[200px]">
+                <a href="https://wa.me/917801046111" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
                   <div className="bg-orange-100 p-4 rounded-xl mb-3">
                     <WhatsAppIcon />
                   </div>
                   <h4 className="font-semibold text-gray-900 text-base mb-1">WhatsApp Us</h4>
                   <p className="text-gray-600 text-sm">+91 7801046111</p>
-                </div>
+                </a>
               </div>
             </div>
 
