@@ -1,14 +1,10 @@
-// Scroll position cache to prevent re-loading
-const scrollCache = new Set<string>();
+// Simple scroll cache for better performance
+const loadedImages = new Set<string>();
 
-export const markAsLoaded = (componentId: string) => {
-  scrollCache.add(componentId);
+export const markAsLoaded = (src: string): void => {
+  loadedImages.add(src);
 };
 
-export const isAlreadyLoaded = (componentId: string): boolean => {
-  return scrollCache.has(componentId);
-};
-
-export const clearScrollCache = () => {
-  scrollCache.clear();
+export const isAlreadyLoaded = (src: string): boolean => {
+  return loadedImages.has(src);
 };

@@ -1,0 +1,136 @@
+{
+  "quickReplies": [
+    "What is Kundalini?",
+    "About Jeeveswara Yogi",
+    "Free courses info",
+    "Contact details",
+    "Sadhaks experiences",
+    "Registration form link?",
+    "Recent gatherings",
+    "What is Shaktipatham?",
+    "Core values",
+    "Vision & Mission",
+    "Seven chakras"
+  ],
+  "responses": {
+    "kundalini": {
+      "keywords": ["kundalini", "energy"],
+      "text": "Kundalini is the primordial cosmic energy that lies dormant at the base of the spine. Often depicted as a coiled serpent, this divine feminine energy represents the creative force of the universe.\n\nWhen awakened through proper Sadhana (spiritual practice), Kundalini rises through the seven chakras, activating higher states of consciousness and ultimately leading to self-realization and unity with the divine.\n\nThis ancient science, preserved in Vedic traditions for millennia, offers a systematic path to spiritual evolution, healing, and the fulfillment of human potential.",
+      "suggestions": ["Tell me about chakras", "Core values", "What is Shaktipatham?", "Registration form link?"]
+    },
+    "courses": {
+      "keywords": ["course", "class", "level"],
+      "text": "**Online Courses:**\n\n🔸 **Level 1**: Brahmarandhra Opening\n🔸 **Level 2**: Sushumna Nadi Activation\n🔸 **Level 3**: Entrance Meditation Test\n🔸 **Level 3**: Chakra Activation\n🔸 **Level 4**: Kundalini Activation\n\n**Residential Courses:**\n\n🏠 **Level-5** (5 Days): Intensify sadhana progression in the presence of Parama Pujya Gurudev, while experiencing self-realisation and oneness with universal consciousness\n\n🏠 **Level-5.1** (10 Days): Deepen the experience of self-realisation and expand the consciousness, in the divine presence of Pujya Gurudev",
+      "suggestions": ["What is Kundalini?", "About Jeeveswara Yogi", "Free courses info", "Contact details"]
+    },
+    "pricing": {
+      "keywords": ["free", "cost", "price", "fee"],
+      "text": "Yes! All our online Kundalini classes are completely FREE. You can join our free classes by clicking the registration link.\n\nWe also offer residential courses:\n• Level-5 (5 Days)\n• Level-5.1 (10 Days)\n\nThese intensive programs allow you to deepen your practice in the divine presence of Parama Pujya Gurudev.",
+      "suggestions": ["How to join free classes?", "What are residential courses?", "Registration form link?", "Contact details"]
+    },
+    "guru": {
+      "keywords": ["guru", "teacher", "jeeveswara", "master"],
+      "text": "**Parama Pujya Sree Jeeveswara Yogi** - Our Enlightened Sadguru:\n\n🌟 Born with an awakened Kundalini\n🧘 At age 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours\n🕉️ At age 13, he traveled to Srisailam and encountered his Guru — Lord Shiva Himself\n✨ Spent three days in divine presence receiving profound meditation techniques\n🙏 Attained Enlightenment through dedicated practice\n🌍 Founded Siva Kundalini Sadhana in 2017\n💫 Among the rarest masters who bestow Shaktipatham and Shivapatham\n\n\"Salvation is the birthright of every human being\" - His core belief.",
+      "suggestions": ["What is Shaktipatham?", "Seven chakras", "Contact details", "Sadhaks experiences"]
+    },
+    "safety": {
+      "keywords": ["danger", "safe", "risk", "side effect"],
+      "text": "Kundalini awakening is completely safe when done under the guidance of our Parama Pujya Sree Jeeveswara Yogi with correct techniques. Under his divine guidance, we emphasize proper preparation, understanding, and step-by-step progress to ensure your complete safety.",
+      "suggestions": ["What is Kundalini?", "About Jeeveswara Yogi", "Free courses info", "Registration form link?"]
+    },
+    "chakras": {
+      "keywords": ["chakra", "seven chakras", "energy centers"],
+      "text": "**The Seven Chakras:**\n\n1️⃣ **Muladhara** (Root Chakra) - Foundation of existence\n2️⃣ **Svadhisthana** (Sacral Chakra) - Creative force\n3️⃣ **Manipura** (Solar Plexus) - Personal power\n4️⃣ **Anahata** (Heart Chakra) - Unconditional love\n5️⃣ **Vishuddha** (Throat Chakra) - Divine expression\n6️⃣ **Ajna** (Third Eye) - Intuitive wisdom\n7️⃣ **Sahasrara** (Crown Chakra) - Divine connection\n\nKundalini rises through these seven chakras, activating higher states of consciousness.",
+      "suggestions": ["What is chakra activation?", "How does Kundalini rise?", "About Jeeveswara Yogi", "Free courses info"]
+    },
+    "contact": {
+      "keywords": ["contact", "join", "register", "enroll"],
+      "text": "**Connect With Us:**\n\n📧 **Email**: sivakundalini@gmail.com\n📞 **Phone**: +91 78010 46111\n💬 **WhatsApp**: +91 7801046111\n\n🎓 **Join FREE Kundalini Classes**: Click the registration form link on our courses section\n\n**Ready to transform your life?** Connect with us to start your journey with Siva Kundalini Sadhana.",
+      "suggestions": ["Registration form link?", "WhatsApp contact?", "What do I need to start?", "Free courses info"]
+    },
+    "benefits": {
+      "keywords": ["benefit", "result", "help", "improve"],
+      "text": "Kundalini Sadhana offers profound benefits:\n\n⚡ **Enhanced Energy**: Experience unlimited cosmic energy flowing through your being\n🎯 **Mental Clarity**: Achieve crystal clear focus and enhanced cognitive abilities\n⚖️ **Emotional Balance**: Reduces stress, fear, and negativity, creating inner peace\n🔥 **Chakra Activation**: Aligns and energizes the body's subtle energy centers\n✨ **Spiritual Awakening**: Expands consciousness and deepens connection with the Divine\n🌟 **Inner Transformation**: Brings self-realization and a purposeful, harmonious life",
+      "suggestions": ["What are chakras?", "How does energy flow?", "Is this safe?", "Sadhaks experiences"]
+    },
+    "kalpataru": {
+      "keywords": ["kalpataru", "healing", "manifestation", "technique"],
+      "text": "**Kalpataru Workshop**: A powerful technique for healing and manifestation conducted by Gurudev, known as the fastest and safest healing and manifestation technique.\n\nThese techniques are taught during our courses and special workshops.",
+      "suggestions": ["How to join courses?", "Is this safe?", "Sadhaks experiences", "Contact details"]
+    },
+    "learnKalpataru": {
+      "keywords": ["how to learn kalpataru", "learn kalpataru"],
+      "text": "These techniques are taught during our courses and special workshops.",
+      "suggestions": ["How to join courses?", "What are the courses?", "Contact details", "Free courses info"]
+    },
+    "registrationLink": {
+      "keywords": ["registration form link", "registration link", "form link"],
+      "text": "Here is the registration form for our FREE Kundalini Classes:\n\n[🔗 Click to Join FREE Classes](https://docs.google.com/forms/d/e/1FAIpQLSdU0NsweV8vBb7NFgxc-0p8Sr2Do0SSCOqulGZcFC8VRnzWng/viewform)\n\nBegin your transformative spiritual journey with us!",
+      "suggestions": ["What courses are available?", "Contact details", "What do I need to start?", "Free courses info"]
+    },
+    "greetings": {
+      "keywords": ["hello", "hi", "hey", "namaste"],
+      "text": "Namaste! 🙏 Welcome to Siva Kundalini Sadhana. I'm here to guide you on your spiritual journey and answer questions about Kundalini awakening, our free courses, and practices.",
+      "suggestions": ["What is Kundalini?", "Tell me about courses", "How to get started?", "Registration form link?"]
+    },
+    "gratitude": {
+      "keywords": ["thank", "thanks", "grateful"],
+      "text": "You're most welcome! 🙏 It's our joy to share this sacred knowledge. Feel free to ask anything about your spiritual journey - I'm here to help guide you toward awakening.",
+      "suggestions": ["Contact details", "What is Kundalini?", "About Jeeveswara Yogi", "Free courses info"]
+    },
+    "shaktipatham": {
+      "keywords": ["shaktipatham", "shaktipat"],
+      "text": "Sree Jeeveswara Yogi Gurudev is among the rarest of masters who bestow Shaktipatham (the direct transmission of energy from Guru to disciple) and Shivapatham, guiding seekers on the path to ultimate realization.",
+      "suggestions": ["About Jeeveswara Yogi", "Sadhaks experiences", "Free courses info", "Seven chakras"]
+    },
+    "questions": {
+      "keywords": ["ask questions", "questions during class", "doubt", "clarify", "interactive"],
+      "text": "Yes, we can clarify our doubts! Our classes are fully interactive with questions welcomed anytime.",
+      "suggestions": ["Sadhaks experiences", "Recent gatherings", "Vision & Mission", "Contact details"]
+    },
+    "safeForBeginners": {
+      "keywords": ["is it safe for beginners", "safe for beginners"],
+      "text": "Yes, it is completely safe under the guidance of our Pujya Sree Jeeveswara Yogi. Our enlightened Gurudev ensures that all practices are taught with proper preparation, gradual progression, and continuous support for beginners.",
+      "suggestions": ["About Jeeveswara Yogi", "Free courses info", "Contact details", "Registration form link?"]
+    },
+    "beginners": {
+      "keywords": ["beginner", "start", "new", "first time", "core values", "values"],
+      "text": "Perfect for beginners! Start your transformative journey with our carefully structured courses.\n\n**Core Values we teach:**\n• **Surrender** - Letting go of ego\n• **Service** - Selfless service to others\n• **Practice** - Regular spiritual practice\n• **Gratitude** - Thankfulness for divine grace\n• **Acceptance & Forgiveness** - Inner peace and healing\n\n🌱 No prior experience needed\n🎓 Complete foundational knowledge provided\n👥 Supportive spiritual community\n🙏 All online courses are FREE",
+      "suggestions": ["How to join free classes?", "What are Levels?", "Can I ask questions?", "Registration form link?"]
+    },
+    "visitBlissCenter": {
+      "keywords": ["how to visit bliss center", "visit bliss center"],
+      "text": "Please connect with our dedicated sevaks through the contact details provided for personalized guidance on visiting the SKS Bliss Center. Our compassionate volunteers will assist you with directions, timings, and all necessary arrangements for your sacred visit.",
+      "suggestions": ["Contact details", "What happens at Bliss Center?", "Meditation sessions timing?", "Recent gatherings"]
+    },
+    "blissCenter": {
+      "keywords": ["what happens at bliss center", "bliss center"],
+      "text": "Sadhaks can visit and meditate here and have blissful experience. The SKS Bliss Center is a sacred space where seekers come to awaken their consciousness and embrace stillness through deep meditation. It provides a serene environment for spiritual practice, inner peace, and divine connection under the blessed presence of our spiritual community.",
+      "suggestions": ["How to visit Bliss Center?", "Meditation sessions timing?", "Contact details", "Recent gatherings"]
+    },
+    "gatherings": {
+      "keywords": ["gathering", "event", "celebration", "guru poornima", "sivaratri"],
+      "text": "**Recent Sacred Gatherings:**\n\n🧘 **Meditation in SKS Bliss Center** (September 2025): Awaken your consciousness and embrace stillness with meditation at SKS Bliss Center\n\n🌕 **Guru Poornima & Gurudev Janmadinam** (July 2025): A day of gratitude and reverence—honoring Gurudev on Guru Poornima and his Janmadinam\n\n🕉️ **MahaSivaratri 2025** (February 2025): A Night of Spiritual Awakening, devotion, and union with the Divine - 5000+ global attendees\n\nThese sacred gatherings strengthen our spiritual bonds and deepen our practice together.",
+      "suggestions": ["How to join events?", "What happens at Bliss Center?", "Tell me about MahaSivaratri", "Contact details"]
+    },
+    "vision": {
+      "keywords": ["vision", "mission", "purpose", "goal"],
+      "text": "**Our Vision & Mission:**\n\n🌅 **VISION**: \"To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.\"\n\n🌍 **MISSION**: \"To guide the transformation of human consciousness (Jeeva) into divine consciousness (Shiva) — helping individuals move beyond limitations of the ego and awaken to higher awareness, inner peace, and oneness with the universal Self.\"\n\nFounded in 2017 by Sree Jeeveswara Yogi to serve humanity freely.",
+      "suggestions": ["How does Jeeva become Shiva?", "Why founded in 2017?", "What makes this path unique?", "About Jeeveswara Yogi"]
+    },
+    "experiences": {
+      "keywords": ["experience", "testimonial", "sadhak", "student", "transformation"],
+      "text": "**Real Sadhak Transformations:**\n\n🩺 **Dr. Ravali (Hyderabad)**: Migraine-Free After 15 Years! After receiving Shaktipatam during Mahashivaratri 2023, 90% of her migraines disappeared within 4 months\n\n💰 **Chandra Mohan (Hyderabad)**: Financial Freedom through Kalpataru technique - ₹10 lakhs debt cleared, loans approved within 3 days\n\n👶 **Anjali (Bengaluru)**: Son with speech delay spoke first words \"ball,\" \"bat,\" \"cat\" within 3 days using Kalpataru technique\n\nOver 100,000+ students transformed across 40+ countries with 100+ volunteers serving globally.",
+      "suggestions": ["What is Kalpataru technique?", "What is Shaktipatam?", "How to join community?", "Registration form link?"]
+    },
+    "journey": {
+      "keywords": ["journey", "path", "statistics", "numbers", "founded"],
+      "text": "**Our Spiritual Journey:**\n\n📅 **Founded in 2017** by Sree Jeeveswara Yogi\n👥 **100,000+ Students Transformed** worldwide\n🌍 **40+ Countries** reached globally\n🤝 **100+ Volunteers** serving the community\n\n**Gurudev's Journey**: Born with awakened Kundalini, entered Samadhi at age 8, met Lord Shiva at Srisailam at age 13, attained Enlightenment, and now serves humanity through free teachings.\n\n\"Salvation is the birthright of every human being\" - Gurudev's core belief.",
+      "suggestions": ["Tell me about Srisailam experience", "How to become volunteer?", "Global community details?", "About Jeeveswara Yogi"]
+    },
+    "default": {
+      "text": "I'm here to help you with questions about Siva Kundalini Sadhana, our free spiritual courses, awakening practices, or joining our community. What specific aspect would you like to explore?",
+      "suggestions": ["What is Kundalini awakening?", "Tell me about free courses", "How to join classes?", "Is it safe for beginners?"]
+    }
+  }
+}

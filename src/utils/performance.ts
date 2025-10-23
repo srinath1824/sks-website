@@ -5,7 +5,7 @@ export const debounce = <T extends (...args: any[]) => void>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: number;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -27,32 +27,43 @@ export const throttle = <T extends (...args: any[]) => void>(
   };
 };
 
-// Preload critical resources
+// Preload critical resources with priority
 export const preloadCriticalResources = () => {
-  // Only preload hero image
+  if (typeof window === 'undefined') return;
+  
+  // Simple image preload without DOM manipulation
   const img = new Image();
   img.src = '/images/SKS_Logo_4K-1.png';
 };
 
-// Optimize scroll performance
+// Optimize scroll performance with passive listeners
 export const optimizeScrollPerformance = () => {
-  // Add passive event listeners for better scroll performance
-  const passiveSupported = (() => {
-    let passive = false;
-    try {
-      const options = {
-        get passive() {
-          passive = true;
-          return false;
-        }
-      };
-      window.addEventListener('test', () => {}, options);
-      window.removeEventListener('test', () => {}, options);
-    } catch (err) {
-      passive = false;
-    }
-    return passive;
-  })();
+  let passive = false;
+  try {
+    const options: AddEventListenerOptions = {
+      get passive() {
+        passive = true;
+        return false;
+      }
+    };
+    window.addEventListener('test' as keyof WindowEventMap, () => {}, options);
+    window.removeEventListener('test' as keyof WindowEventMap, () => {}, options);
+  } catch (err) {
+    passive = false;
+  }
+  return passive ? { passive: true } : false;
+};
 
-  return passiveSupported ? { passive: true } : false;
+// Resource hints for better loading
+export const addResourceHints = () => {
+  // Skip DOM manipulation that might cause issues
+  return;
+};
+
+// Initialize performance optimizations
+export const initPerformanceOptimizations = () => {
+  if (typeof window === 'undefined') return;
+  
+  // Simple initialization without DOM manipulation
+  preloadCriticalResources();
 };

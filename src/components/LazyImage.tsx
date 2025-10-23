@@ -1,50 +1,37 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { getOptimizedImageUrl } from '../utils/imageOptimization';
-import { getCachedImage } from '../utils/imageCache';
-import { markAsLoaded, isAlreadyLoaded } from '../utils/scrollCache';
 
 interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
+  priority?: boolean;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({ 
   src, 
   alt, 
-  className = ''
+  className = '',
+  priority = false
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(priority);
+  const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    // Check if already loaded in scroll cache
-    if (isAlreadyLoaded(src)) {
-      setIsLoaded(true);
-      setIsInView(true);
-      return;
-    }
-
-    // Check if image is already cached
-    const cachedImg = getCachedImage(src);
-    if (cachedImg) {
-      setIsLoaded(true);
-      setIsInView(true);
-      markAsLoaded(src);
+    if (priority) {
+      setShouldLoad(true);
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          setIsLoading(true);
+          setShouldLoad(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.01, rootMargin: '400px' }
+      { threshold: 0.1, rootMargin: '100px' }
     );
 
     if (imgRef.current) {
@@ -52,35 +39,46 @@ const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [src]);
+  }, [priority]);
 
-  const optimizedSrc = getOptimizedImageUrl(src, 600, 400, 50);
+  const handleLoad = () => {
+    setIsLoaded(true);
+    setHasError(false);
+  };
+
+  const handleError = () => {
+    console.warn(`Failed to load image: ${src}`);
+    setHasError(true);
+    setIsLoaded(true);
+  };
 
   return (
-    <div className={`${className} relative overflow-hidden`}>
-      {!isLoaded && isInView && (
-        <div className="absolute inset-0 bg-gray-200">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-300 to-transparent animate-pulse"></div>
+    <div ref={imgRef} className={`${className} relative overflow-hidden bg-gray-100`}>
+      {shouldLoad && !hasError && (
+        <img
+          src={src}
+          alt={alt}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={handleLoad}
+          onError={handleError}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      )}
+      {!isLoaded && shouldLoad && !hasError && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500 text-sm p-4 text-center">
+          <div>
+            <div className="mb-2">⚠️</div>
+            <div>Image not available</div>
+            <div className="text-xs mt-1 opacity-75">{src}</div>
+          </div>
         </div>
       )}
-      <img
-        ref={imgRef}
-        src={optimizedSrc}
-        alt={alt}
-        className={`w-full h-full object-cover ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
-        onLoad={() => {
-          setIsLoaded(true);
-          setIsLoading(false);
-          markAsLoaded(src);
-        }}
-        onError={() => {
-          setIsLoaded(true);
-          setIsLoading(false);
-        }}
-        loading="lazy"
-        decoding="async"
-        fetchPriority="low"
-      />
     </div>
   );
 };
