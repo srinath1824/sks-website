@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { throttle } from '../utils/performance';
 import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isResultsPage = location.pathname === '/meditation-test-results';
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -54,23 +57,23 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || isResultsPage
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-orange-100' 
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Logo />
-            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className={`text-xl font-bold ${isScrolled || isResultsPage ? 'text-gray-900' : 'text-white'}`}>
               Siva Kundalini Sadhana
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+          <nav className="hidden md:flex space-x-8 items-center">
+            {!isResultsPage && navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
@@ -84,18 +87,20 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-white'}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {!isResultsPage && (
+            <button
+              className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg shadow-lg mt-2 p-4 border border-orange-100">
-            {navItems.map((item) => (
+            {!isResultsPage && navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
