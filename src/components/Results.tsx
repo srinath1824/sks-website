@@ -53,7 +53,7 @@ const Results: React.FC = () => {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/search-result`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mobileNumber: phoneNumber })
+        body: JSON.stringify({ mobileNumber: phoneNumber.replace(/[^0-9]/g, '') })
       });
       
       const apiResult = await response.json();
@@ -65,7 +65,7 @@ const Results: React.FC = () => {
           currentGroup: apiResult.data.current_group,
           examDate: apiResult.data.exam_date,
           result: apiResult.data.result as 'Selected' | 'Not Selected',
-          whatsappLink: apiResult.data.result === 'Selected' ? apiResult.whatsappLink : undefined
+          whatsappLink: apiResult.data.result.toLowerCase() === 'selected' ? apiResult.whatsappLink : undefined
         };
         setResult(resultData);
       } else {
@@ -108,10 +108,20 @@ const Results: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white pt-20 pb-12 lg:pb-16">
       <div className="container mx-auto px-4 lg:px-8 xl:px-12 py-8 lg:py-12 max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Meditation Test Results for Level-3 Entry
-          </h1>
+        <div className="mb-8">
+          <div className="text-right mb-2">
+            <a 
+              href="/" 
+              className="text-orange-600 hover:text-orange-700 font-medium text-sm underline"
+            >
+              SKS Home page
+            </a>
+          </div>
+          <div className="text-center">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Meditation Test Results for Level-3 Entry
+            </h1>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -128,34 +138,18 @@ const Results: React.FC = () => {
                   <input
                     type="tel"
                     value={phoneNumber}
-                    onChange={(e) => {
-                      const value = e.target.value.replace(/[^0-9]/g, '');
-                      if (value.length <= 10) {
-                        setPhoneNumber(value);
-                      }
-                    }}
-                    placeholder="10-digit mobile number"
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    placeholder="Enter mobile number"
                     className="w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
-                    pattern="[0-9]{10}"
-                    maxLength={10}
                     required
                   />
-                  {/* {phoneNumber && (
-                    <button
-                      type="button"
-                      onClick={() => setPhoneNumber('')}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  )} */}
                 </div>
               </div>
               
               <div className="flex gap-2">
                 <button
                   type="submit"
-                  disabled={isLoading || phoneNumber.length !== 10}
+                  disabled={isLoading || phoneNumber.length < 1}
                   className="flex-1 bg-orange-600 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-orange-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-sm"
                 >
                   {isLoading ? (
@@ -239,15 +233,26 @@ const Results: React.FC = () => {
 
                   <div className="sm:col-span-2">
                     {result.result.toLocaleLowerCase() === 'selected' ? (
-                      <a
-                        href={result.whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors text-sm mt-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Join Level-3 Group
-                      </a>
+                      result.whatsappLink ? (
+                        <a
+                          href={result.whatsappLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors text-sm mt-1"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Join Level-3 Group
+                        </a>
+                      ) : (
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-1">
+                          <p className="text-green-800 text-sm font-medium mb-2">
+                            Congratulations! You have been selected for Level-3.
+                          </p>
+                          <p className="text-green-700 text-sm">
+                            Please contact us at <strong>6304429254</strong> to join the Level-3 group.
+                          </p>
+                        </div>
+                      )
                     ) : (
                       <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mt-1">
                         <p className="text-orange-800 text-sm font-medium mb-3">
@@ -260,15 +265,6 @@ const Results: React.FC = () => {
                     )}
                   </div>
                 </div>
-                
-                {/* Contact Information - Common for both Selected and Not Selected */}
-                <div className="mt-4 pt-4 border-t border-gray-200">
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                    <p className="text-blue-800 text-sm font-medium text-center">
-                      For any queries, WhatsApp to : <strong>6304429254</strong> (or) Call : <strong>7801046111</strong>
-                    </p>
-                  </div>
-                </div>
               </>
             ) : (
               <div className="text-center">
@@ -279,6 +275,24 @@ const Results: React.FC = () => {
               </div>
             )}
           </div>
+        </div>
+        
+        
+        {/* Contact Information */}
+        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-4">
+          <p className="text-blue-800 text-sm font-medium text-center">
+            For any queries, WhatsApp to : <strong>6304429254</strong> (or) Call : <strong>7801046111</strong>
+          </p>
+        </div>
+        
+        {/* SKS Home Page Link after Results */}
+        <div className="mt-6 text-center">
+          <a 
+            href="/" 
+            className="text-orange-600 hover:text-orange-700 font-medium text-sm underline"
+          >
+            SKS Home page
+          </a>
         </div>
         
         {/* Disclaimer */}
@@ -295,6 +309,16 @@ const Results: React.FC = () => {
               By enrolling and participating in the sessions or related programmes conducted by the organisation, each individual acknowledges that they do so voluntarily and at their own discretion and risk. The organisation shall not be held liable for any outcomes resulting from the practice or application of the teachings.
             </p>
           </div>
+        </div>
+        
+        {/* SKS Home Page Link after Disclaimer */}
+        <div className="mt-6 text-center">
+          <a 
+            href="/" 
+            className="text-orange-600 hover:text-orange-700 font-medium text-sm underline"
+          >
+            SKS Home page
+          </a>
         </div>
       </div>
     </div>

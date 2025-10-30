@@ -51,13 +51,9 @@ function App() {
               </>
             } />
           </Routes>
-          <Routes>
-            <Route path="/" element={
-              <Suspense fallback={<Loading />}>
-                <Footer />
-              </Suspense>
-            } />
-          </Routes>
+          <Suspense fallback={<Loading />}>
+            <Footer />
+          </Suspense>
         </div>
       </Router>
     </HelmetProvider>

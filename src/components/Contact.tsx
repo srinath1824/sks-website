@@ -65,12 +65,12 @@ const Contact = () => {
                   <p className="text-gray-600 text-sm">+91 78010 46111</p>
                 </a>
 
-                <a href="https://wa.me/917801046111" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
+                <a href="https://wa.me/916304429254" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
                   <div className="bg-orange-100 p-4 rounded-xl mb-3">
                     <WhatsAppIcon />
                   </div>
                   <h4 className="font-semibold text-gray-900 text-base mb-1">WhatsApp Us</h4>
-                  <p className="text-gray-600 text-sm">+91 7801046111</p>
+                  <p className="text-gray-600 text-sm">+91 6304429254</p>
                 </a>
               </div>
             </div>

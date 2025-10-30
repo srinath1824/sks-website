@@ -7,6 +7,7 @@ const KundaliniKnowledge = lazy(() => import(/* webpackPrefetch: true */ './Kund
 const Courses = lazy(() => import(/* webpackPrefetch: true */ './Courses'));
 const Events = lazy(() => import(/* webpackPrefetch: true */ './Events'));
 const Gallery = lazy(() => import(/* webpackPrefetch: true */ './Gallery'));
+
 const Mission = lazy(() => import(/* webpackPrefetch: true */ './Mission'));
 const Contact = lazy(() => import(/* webpackPrefetch: true */ './Contact'));
 const Hero = lazy(() => import(/* webpackPrefetch: true */ './Hero'));

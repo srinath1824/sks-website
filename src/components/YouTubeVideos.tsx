@@ -17,7 +17,8 @@ const YouTubeVideos = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<YouTubeVideo | null>(null);
   const [playerOpen, setPlayerOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   // YouTube API configuration
   const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || '';
@@ -59,11 +60,11 @@ const YouTubeVideos = () => {
 
       const response = PLAYLIST_ID
         ? await fetch(
-            `https://www.googleapis.com/youtube/v3/playlistItems?key=${YOUTUBE_API_KEY}&playlistId=${PLAYLIST_ID}&part=snippet&maxResults=12`,
+            `https://www.googleapis.com/youtube/v3/playlistItems?key=${YOUTUBE_API_KEY}&playlistId=${PLAYLIST_ID}&part=snippet&maxResults=25`,
             { signal: controller.signal }
           )
         : await fetch(
-            `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet&order=date&maxResults=12&type=video`,
+            `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet&order=date&maxResults=25&type=video`,
             { signal: controller.signal }
           );
 
@@ -112,6 +113,26 @@ const YouTubeVideos = () => {
     setSelectedVideo(null);
   };
 
+  const updateArrowVisibility = () => {
+    const container = document.querySelector('.youtube-scroll-container');
+    if (container) {
+      const scrollLeft = container.scrollLeft;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < maxScrollLeft - 1);
+    }
+  };
+
+  useEffect(() => {
+    const container = document.querySelector('.youtube-scroll-container');
+    if (container) {
+      updateArrowVisibility();
+      container.addEventListener('scroll', updateArrowVisibility);
+      return () => container.removeEventListener('scroll', updateArrowVisibility);
+    }
+  }, [videos]);
+
   const handleArrowClick = (direction: 'left' | 'right') => {
     const container = document.querySelector('.youtube-scroll-container');
     if (container) {
@@ -125,9 +146,6 @@ const YouTubeVideos = () => {
             );
       container.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
     }
-    setCurrentIndex(prev =>
-      direction === 'left' ? Math.max(0, prev - 1) : Math.min(videos.length - 1, prev + 1)
-    );
   };
 
   return (
@@ -150,15 +168,24 @@ const YouTubeVideos = () => {
         )}
 
         {error && (
-          <div className="text-center py-8">
-            <p className="text-red-600">{error}</p>
+          <div className="text-center py-8 bg-orange-50 rounded-xl">
+            <p className="text-gray-600 mb-4">YouTube testimonials coming soon...</p>
+            <a 
+              href="https://www.youtube.com/@SivaKundaliniSadhanaChannel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-700 transition-colors"
+            >
+              <Play className="w-4 h-4" />
+              Visit Our YouTube Channel
+            </a>
           </div>
         )}
 
         {!loading && !error && (
         <div className="relative">
           {/* Left Arrow */}
-          {videos.length > 4 && currentIndex > 0 && (
+          {canScrollLeft && (
             <button
               onClick={() => handleArrowClick('left')}
               className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-orange-500 text-white rounded-full opacity-70 hover:opacity-100 hover:bg-orange-600 transition-all duration-200 z-10 flex items-center justify-center"
@@ -168,7 +195,7 @@ const YouTubeVideos = () => {
           )}
 
           {/* Right Arrow */}
-          {videos.length > 4 && currentIndex < videos.length - 4 && (
+          {canScrollRight && (
             <button
               onClick={() => handleArrowClick('right')}
               className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-orange-500 text-white rounded-full opacity-70 hover:opacity-100 hover:bg-orange-600 transition-all duration-200 z-10 flex items-center justify-center"

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Heart, Image as ImageIcon } from 'lucide-react';
+import { Heart, Image as ImageIcon, Play } from 'lucide-react';
 import LazyImage from './LazyImage';
 import YouTubeVideos from './YouTubeVideos';
+
+
 
 const Gallery = () => {
   const [expandedTestimonial, setExpandedTestimonial] = useState<number | null>(null);
@@ -85,7 +87,9 @@ const Gallery = () => {
           </div>
         </div>
 
-        <YouTubeVideos />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <YouTubeVideos />
+        </div>
 
         {/* Testimonials */}
         <div>
