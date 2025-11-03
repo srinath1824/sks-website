@@ -1,10 +1,11 @@
 import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import SEO from './components/SEO';
 import { organizationSchema } from './data/structuredData';
 import { initPerformanceOptimizations } from './utils/performance';
+import { FEATURES } from './config/features';
 
 // Lazy load components with prefetch
 const Home = lazy(() => import(/* webpackPrefetch: true */ './components/Home'));
@@ -38,18 +39,22 @@ function App() {
                 </Suspense>
               </>
             } />
-            <Route path="/meditation-test-results" element={
-              <>
-                <SEO 
-                  title="Meditation Test Results | Siva Kundalini Sadhana"
-                  description="Check your Level-3 entrance test results. Enter your mobile number to view your test status and next steps."
-                  keywords="level 3 results, entrance test, kundalini level 3, test results, siva kundalini sadhana"
-                />
-                <Suspense fallback={<Loading />}>
-                  <Results />
-                </Suspense>
-              </>
-            } />
+            {FEATURES.MEDITATION_RESULTS ? (
+              <Route path="/meditation-test-results" element={
+                <>
+                  <SEO 
+                    title="Meditation Test Results | Siva Kundalini Sadhana"
+                    description="Check your Level-3 entrance test results. Enter your mobile number to view your test status and next steps."
+                    keywords="level 3 results, entrance test, kundalini level 3, test results, siva kundalini sadhana"
+                  />
+                  <Suspense fallback={<Loading />}>
+                    <Results />
+                  </Suspense>
+                </>
+              } />
+            ) : (
+              <Route path="/meditation-test-results" element={<Navigate to="/" replace />} />
+            )}
           </Routes>
           <Suspense fallback={<Loading />}>
             <Footer />
