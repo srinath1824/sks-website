@@ -40,7 +40,7 @@ export const kundaliniFAQSchema = {
       "name": "Are there dangers or side effects of Kundalini awakening?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Risks include emotional instability, anxiety, insomnia, physical discomfort, and confusion. These can be minimized through proper grounding practices, balanced lifestyle, and experienced guidance from Parama Pujya Sree Jeeveswara Yogi."
+        "text": "Yes. Risks include emotional instability, anxiety, insomnia, physical discomfort, and confusion. These can be minimized through proper grounding practices, balanced lifestyle, and experienced guidance from Parama Pujya SriJeeveswara Yogi."
       }
     },
     {
@@ -97,7 +97,7 @@ export const organizationSchema = {
   "foundingDate": "2017",
   "founder": {
     "@type": "Person",
-    "name": "Parama Pujya Sree Jeeveswara Yogi"
+    "name": "Parama Pujya SriJeeveswara Yogi"
   },
   "contactPoint": {
     "@type": "ContactPoint",

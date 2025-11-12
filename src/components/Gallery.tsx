@@ -32,8 +32,8 @@ const Gallery = () => {
       name: 'Dr. Ravali',
       location: 'Hyderabad',
       title: 'Migraine-Free After 15 Years!',
-      shortQuote: 'Dr. Ravali, a medical practitioner from Hyderabad, battled severe migraines for over 15 years. Life became a constant struggle… until she met Parama Pujya Sree Jeeveswara Yogi.',
-      fullQuote: 'Dr. Ravali, a medical practitioner from Hyderabad, battled severe migraines for over 15 years. Life became a constant struggle… until she met Parama Pujya Sree Jeeveswara Yogi 🙏 After attending Level 5 and receiving Shaktipatam during Mahashivaratri 2023 in Siva Kundalini Ashram, everything changed. She felt a divine shower of white energy flow through her — and healing began. Within 4 months, 90% of her migraines disappeared. Today, she lives an energetic, pain-free life — something she once thought was impossible. "He is not just a human… He is a DIVINE being."',
+      shortQuote: 'I had been battling severe migraines for over 15 years. Life had become a constant struggle… until I met Parama Pujya Sri Jeeveswara Yogi 🙏',
+      fullQuote: 'I had been battling severe migraines for over 15 years. Life had become a constant struggle… until I met Parama Pujya Sri Jeeveswara Yogi 🙏 After attending Level 5 and receiving Shaktipatam during Mahashivaratri 2023 at Siva Kundalini Ashram, everything changed. I experienced a divine shower of white energy flowing through me — and my healing began. Within just four months, nearly 90% of my migraines disappeared. Today, I live an energetic, pain-free life — something I once thought was impossible. He is not just a human… He is a DIVINE being.',
       // image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
     },
     {
@@ -49,7 +49,7 @@ const Gallery = () => {
       location: 'Bengaluru',
       title: 'Kalpataru Miracle: My Son Spoke Within 3 Days',
       shortQuote: 'Anjali, a Sadhak from Bangalore, was heartbroken when her son was diagnosed with a speech delay disorder.',
-      fullQuote: 'Anjali, a Sadhak from Bangalore, was heartbroken when her son was diagnosed with a speech delay disorder. Despite visiting top hospitals and specialists, she was told there was no medical cure. Guided to explore holistic healing, she came across a video of a miraculous recovery—where a child with a hole in the heart (ASD) was healed by the divine grace of Parama Pujya Sree Jeeveswara Yogi. Inspired, Anjali joined the SKS Level 1 course and later attended the Kalpataru session by Pujya Gurudev—renowned as the fastest and safest healing and manifestation technique. With deep faith, she applied the technique to her son. In just 3 days, to her astonishment, he spoke his first words: "ball," "bat," and "cat." After 8 months of despair, she finally witnessed a miracle. With heartfelt gratitude, she says: "I am forever indebted to Gurudev and surrender my life at HIS feet."',
+      fullQuote: 'Anjali, a Sadhak from Bangalore, was heartbroken when her son was diagnosed with a speech delay disorder. Despite visiting top hospitals and specialists, she was told there was no medical cure. Guided to explore holistic healing, she came across a video of a miraculous recovery—where a child with a hole in the heart (ASD) was healed by the divine grace of Parama Pujya SriJeeveswara Yogi. Inspired, Anjali joined the SKS Level 1 course and later attended the Kalpataru session by Pujya Gurudev—renowned as the fastest and safest healing and manifestation technique. With deep faith, she applied the technique to her son. In just 3 days, to her astonishment, he spoke his first words: "ball," "bat," and "cat." After 8 months of despair, she finally witnessed a miracle. With heartfelt gratitude, she says: "I am forever indebted to Gurudev and surrender my life at HIS feet."',
       // image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'
     }
   ];
@@ -87,9 +87,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <YouTubeVideos />
-        </div>
+        <YouTubeVideos />
 
         {/* Testimonials */}
         <div>

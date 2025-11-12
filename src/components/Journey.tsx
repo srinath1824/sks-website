@@ -12,7 +12,7 @@ const Journey = () => {
             </h2>
             
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Parama Pujya <strong>Sree Jeeveswara Yogi</strong> was born with an awakened Kundalini. At the tender age of 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours. From that moment onward, his heart was filled with a burning curiosity to explore the mysteries of meditation.
+              Parama Pujya <strong>SriJeeveswara Yogi</strong> was born with an awakened Kundalini. At the tender age of 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours. From that moment onward, his heart was filled with a burning curiosity to explore the mysteries of meditation.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
               At the age of 13, guided by his spiritual quest, he traveled to the sacred land of <strong>Srisailam</strong>, a powerful abode of Lord Shiva. There, in a miraculous turn, he encountered his Guru — none other than <strong>Lord Shiva Himself</strong>. In the divine presence of his Guru, he spent three days and received profound, intense meditation techniques.
@@ -24,7 +24,7 @@ const Journey = () => {
               In 2017, he founded <strong>Siva Kundalini Sadhana</strong>, a non-profit spiritual organization with the mission of offering this divine practice freely to all seekers. Gurudev strongly believes that <strong>Salvation is the birthright of every human being</strong>, and thus he shares these teachings without any barriers or prerequisites.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Sree Jeeveswara Yogi Gurudev is among the rarest of masters who bestow <strong>Shaktipatham</strong> (the direct transmission of energy from Guru to disciple) and <strong>Shivapatham</strong>, guiding seekers on the path to ultimate realization.
+              SriJeeveswara Yogi Gurudev is among the rarest of masters who bestow <strong>Shaktipatham</strong> (the direct transmission of energy from Guru to disciple) and <strong>Shivapatham</strong>, guiding seekers on the path to ultimate realization.
             </p>
           </div>
 

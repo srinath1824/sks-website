@@ -30,12 +30,12 @@
     },
     "guru": {
       "keywords": ["guru", "teacher", "jeeveswara", "master"],
-      "text": "**Parama Pujya Sree Jeeveswara Yogi** - Our Enlightened Sadguru:\n\n🌟 Born with an awakened Kundalini\n🧘 At age 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours\n🕉️ At age 13, he traveled to Srisailam and encountered his Guru — Lord Shiva Himself\n✨ Spent three days in divine presence receiving profound meditation techniques\n🙏 Attained Enlightenment through dedicated practice\n🌍 Founded Siva Kundalini Sadhana in 2017\n💫 Among the rarest masters who bestow Shaktipatham and Shivapatham\n\n\"Salvation is the birthright of every human being\" - His core belief.",
+      "text": "**Parama Pujya SriJeeveswara Yogi** - Our Enlightened Sadguru:\n\n🌟 Born with an awakened Kundalini\n🧘 At age 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours\n🕉️ At age 13, he traveled to Srisailam and encountered his Guru — Lord Shiva Himself\n✨ Spent three days in divine presence receiving profound meditation techniques\n🙏 Attained Enlightenment through dedicated practice\n🌍 Founded Siva Kundalini Sadhana in 2017\n💫 Among the rarest masters who bestow Shaktipatham and Shivapatham\n\n\"Salvation is the birthright of every human being\" - His core belief.",
       "suggestions": ["What is Shaktipatham?", "Seven chakras", "Contact details", "Sadhaks experiences"]
     },
     "safety": {
       "keywords": ["danger", "safe", "risk", "side effect"],
-      "text": "Kundalini awakening is completely safe when done under the guidance of our Parama Pujya Sree Jeeveswara Yogi with correct techniques. Under his divine guidance, we emphasize proper preparation, understanding, and step-by-step progress to ensure your complete safety.",
+      "text": "Kundalini awakening is completely safe when done under the guidance of our Parama Pujya SriJeeveswara Yogi with correct techniques. Under his divine guidance, we emphasize proper preparation, understanding, and step-by-step progress to ensure your complete safety.",
       "suggestions": ["What is Kundalini?", "About Jeeveswara Yogi", "Free courses info", "Registration form link?"]
     },
     "chakras": {
@@ -80,7 +80,7 @@
     },
     "shaktipatham": {
       "keywords": ["shaktipatham", "shaktipat"],
-      "text": "Sree Jeeveswara Yogi Gurudev is among the rarest of masters who bestow Shaktipatham (the direct transmission of energy from Guru to disciple) and Shivapatham, guiding seekers on the path to ultimate realization.",
+      "text": "SriJeeveswara Yogi Gurudev is among the rarest of masters who bestow Shaktipatham (the direct transmission of energy from Guru to disciple) and Shivapatham, guiding seekers on the path to ultimate realization.",
       "suggestions": ["About Jeeveswara Yogi", "Sadhaks experiences", "Free courses info", "Seven chakras"]
     },
     "questions": {
@@ -90,7 +90,7 @@
     },
     "safeForBeginners": {
       "keywords": ["is it safe for beginners", "safe for beginners"],
-      "text": "Yes, it is completely safe under the guidance of our Pujya Sree Jeeveswara Yogi. Our enlightened Gurudev ensures that all practices are taught with proper preparation, gradual progression, and continuous support for beginners.",
+      "text": "Yes, it is completely safe under the guidance of our Pujya SriJeeveswara Yogi. Our enlightened Gurudev ensures that all practices are taught with proper preparation, gradual progression, and continuous support for beginners.",
       "suggestions": ["About Jeeveswara Yogi", "Free courses info", "Contact details", "Registration form link?"]
     },
     "beginners": {
@@ -115,7 +115,7 @@
     },
     "vision": {
       "keywords": ["vision", "mission", "purpose", "goal"],
-      "text": "**Our Vision & Mission:**\n\n🌅 **VISION**: \"To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.\"\n\n🌍 **MISSION**: \"To guide the transformation of human consciousness (Jeeva) into divine consciousness (Shiva) — helping individuals move beyond limitations of the ego and awaken to higher awareness, inner peace, and oneness with the universal Self.\"\n\nFounded in 2017 by Sree Jeeveswara Yogi to serve humanity freely.",
+      "text": "**Our Vision & Mission:**\n\n🌅 **VISION**: \"To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.\"\n\n🌍 **MISSION**: \"To guide the transformation of human consciousness (Jeeva) into divine consciousness (Shiva) — helping individuals move beyond limitations of the ego and awaken to higher awareness, inner peace, and oneness with the universal Self.\"\n\nFounded in 2017 by SriJeeveswara Yogi to serve humanity freely.",
       "suggestions": ["How does Jeeva become Shiva?", "Why founded in 2017?", "What makes this path unique?", "About Jeeveswara Yogi"]
     },
     "experiences": {
@@ -125,7 +125,7 @@
     },
     "journey": {
       "keywords": ["journey", "path", "statistics", "numbers", "founded"],
-      "text": "**Our Spiritual Journey:**\n\n📅 **Founded in 2017** by Sree Jeeveswara Yogi\n👥 **100,000+ Students Transformed** worldwide\n🌍 **40+ Countries** reached globally\n🤝 **100+ Volunteers** serving the community\n\n**Gurudev's Journey**: Born with awakened Kundalini, entered Samadhi at age 8, met Lord Shiva at Srisailam at age 13, attained Enlightenment, and now serves humanity through free teachings.\n\n\"Salvation is the birthright of every human being\" - Gurudev's core belief.",
+      "text": "**Our Spiritual Journey:**\n\n📅 **Founded in 2017** by SriJeeveswara Yogi\n👥 **100,000+ Students Transformed** worldwide\n🌍 **40+ Countries** reached globally\n🤝 **100+ Volunteers** serving the community\n\n**Gurudev's Journey**: Born with awakened Kundalini, entered Samadhi at age 8, met Lord Shiva at Srisailam at age 13, attained Enlightenment, and now serves humanity through free teachings.\n\n\"Salvation is the birthright of every human being\" - Gurudev's core belief.",
       "suggestions": ["Tell me about Srisailam experience", "How to become volunteer?", "Global community details?", "About Jeeveswara Yogi"]
     },
     "default": {

@@ -1,6 +1,7 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { ChevronUp } from 'lucide-react';
 import Header from './components/Header';
 import SEO from './components/SEO';
 import { organizationSchema } from './data/structuredData';
@@ -16,9 +17,17 @@ const Footer = lazy(() => import(/* webpackPrefetch: true */ './components/Foote
 const Loading = () => <div className="h-4 bg-gray-100 animate-pulse"></div>;
 
 function App() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   useEffect(() => {
     initPerformanceOptimizations();
+    
+    const handleScroll = () => setShowScrollTop(window.scrollY > 300);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <HelmetProvider>
@@ -59,6 +68,14 @@ function App() {
           <Suspense fallback={<Loading />}>
             <Footer />
           </Suspense>
+          {showScrollTop && (
+            <button
+              onClick={scrollToTop}
+              className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+            >
+              <ChevronUp className="h-6 w-6" />
+            </button>
+          )}
         </div>
       </Router>
     </HelmetProvider>

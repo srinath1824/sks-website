@@ -288,7 +288,7 @@ For support and questions:
 
 ## 🙏 Acknowledgments
 
-- **Parama Pujya Sree Jeeveswara Yogi** - Spiritual guidance and inspiration
+- **Parama Pujya SriJeeveswara Yogi** - Spiritual guidance and inspiration
 - **React Team** - For the amazing framework
 - **Tailwind CSS** - For the utility-first CSS framework
 - **Vite** - For the fast build tool

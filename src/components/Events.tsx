@@ -1,5 +1,3 @@
-import React from 'react';
-import { Users } from 'lucide-react';
 import LazyImage from './LazyImage';
 
 const Events = () => {
@@ -7,25 +5,35 @@ const Events = () => {
 
   const pastEvents = [
     {
+      title: 'Vastra Daanam',
+      date: 'September 2025',
+      description: 'Pujya Gurudev graciously donated sarees to the women of Karwan as part of the Navratri–Sivaratri Deeksha Sep 2025',
+      image: 'images/Vastra_Daanam.jpeg',
+      videoUrl: 'https://youtu.be/mIranj1ZYu8'
+    },
+    {
       title: 'Meditation in SKS Bliss Center',
       date: 'September 2025',
       // participants: '100 pilgrims',
       description: ' Awaken your consciousness and embrace stillness with meditation at SKS Bliss Center.',
-      image: 'images/Bliss Center.jpeg'
+      image: 'images/Bliss Center.jpeg',
+      videoUrl: 'https://youtube.com/shorts/Rxctghk1WSA'
     },
     {
       title: 'Guru Poornima & Gurudev Janmadinam',
       date: 'July 2025',
       // participants: '100 pilgrims',
       description: 'A day of gratitude and reverence—honoring Gurudev on Guru Poornima and his Janmadinam.',
-      image: 'images/GuruPoornima_2025.jpg'
+      image: 'images/GuruPoornima_2025.jpg',
+      videoUrl: 'https://youtu.be/PUygC2i_QDs'
     },
     {
       title: 'MahaSivaratri 2025',
       date: 'February 2025',
       participants: '5000+ global attendees',
       description: 'A Night of Spiritual Awakening, devotion, and union with the Divine.',
-      image: 'images/MahaSivaratri_2025.jpg'
+      image: 'images/MahaSivaratri_2025.jpg',
+      videoUrl: 'https://youtu.be/xHoLBEr9FgM'
     }
   ];
 
@@ -50,7 +58,7 @@ const Events = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pastEvents.map((event, index) => (
-              <div key={index} className="group cursor-pointer">
+              <div key={index} className="group cursor-pointer" onClick={() => window.open(event.videoUrl, '_blank')}>
                 <div className="relative overflow-hidden rounded-2xl shadow-lg">
                   <LazyImage 
                     src={event.image}

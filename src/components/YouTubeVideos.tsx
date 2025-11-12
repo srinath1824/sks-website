@@ -153,7 +153,7 @@ const YouTubeVideos = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-left mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Sadhaks
+            Practioners
             <span className="text-orange-500"> Testimonials</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl">

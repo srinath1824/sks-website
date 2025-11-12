@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { getCachedImage, setCachedImage } from '../utils/imageCache';
 
 interface LazyImageProps {
   src: string;
@@ -13,8 +14,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
   className = '',
   priority = false
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [shouldLoad, setShouldLoad] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(() => !!getCachedImage(src));
+  const [shouldLoad, setShouldLoad] = useState(priority || !!getCachedImage(src));
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -41,7 +42,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
+  const handleLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    setCachedImage(src, img);
     setIsLoaded(true);
     setHasError(false);
   };
@@ -65,6 +68,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
+          fetchPriority={priority ? 'high' : 'auto'}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       )}
       {!isLoaded && shouldLoad && !hasError && (

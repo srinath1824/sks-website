@@ -20,6 +20,7 @@ const Hero = () => {
           src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Meditation"
           className="w-full h-full object-cover opacity-20"
+          priority={true}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/60 via-orange-600/50 to-orange-700/60"></div>
       </div>
@@ -36,12 +37,12 @@ const Hero = () => {
         </div>
 
         <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
-          Transform your life through the sacred science of <strong>Kundalini Sadhana</strong> and unlock your inner power. Experience safe <strong>Kundalini awakening</strong> techniques, understand <strong>chakra activation</strong>, and journey from human consciousness to divine consciousness under the guidance of our enlightened Guru <strong>Parama Pujya Sree Jeeveswara Yogi</strong>.
+          Transform your life through the sacred science of <strong>Kundalini Sadhana</strong> and unlock your inner power. Experience safe <strong>Kundalini awakening</strong> techniques, understand <strong>chakra activation</strong>, and journey from human consciousness to divine consciousness under the guidance of our enlightened Guru <strong>Parama Pujya SriJeeveswara Yogi</strong>.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
           <button 
-            onClick={() => scrollToSection('courses')}
+            onClick={() => window.open(import.meta.env.VITE_REGISTRATION_FORM_URL, '_blank')}
             className="group bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 w-full sm:w-auto justify-center"
             aria-label="Navigate to free Kundalini classes section"
           >
@@ -72,7 +73,7 @@ const Hero = () => {
             <div className="text-orange-200 text-sm md:text-base">Countries reached</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold">100+</div>
+            <div className="text-2xl md:text-3xl font-bold">500+</div>
             <div className="text-orange-200 text-sm md:text-base">Volunteers</div>
           </div>
         </div>

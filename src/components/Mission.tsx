@@ -20,7 +20,7 @@ const Mission = () => {
               <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
             </div>
             <p className="text-gray-600 leading-relaxed mb-6">
-              "To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.”
+              To create a world where every human being is given the opportunity to realize their highest potential and transform into a divine being — living with wisdom, compassion, and unity with universal consciousness. We aspire to build an environment that nurtures inner growth, uplifts humanity, and fosters harmony across the planet.
             </p>
             {/* <ul className="space-y-3 text-gray-600">
               <li className="flex items-center">

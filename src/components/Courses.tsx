@@ -19,7 +19,7 @@ const Courses = () => {
       image: 'images/Level-2 Naadis.webp'
     },
     {
-      level: 'Level 3',
+      level: 'Meditation Test',
       title: 'Entrance Meditation Test',
       image: 'https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop'
     },
@@ -93,7 +93,7 @@ const Courses = () => {
           </div>
           <div className="text-center mt-12 mb-20">
           <button 
-            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdU0NsweV8vBb7NFgxc-0p8Sr2Do0SSCOqulGZcFC8VRnzWng/viewform', '_blank')}
+            onClick={() => window.open(import.meta.env.VITE_REGISTRATION_FORM_URL, '_blank')}
             className="bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             aria-label="Open registration form for free Kundalini classes in new tab"
           >

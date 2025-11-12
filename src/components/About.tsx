@@ -28,9 +28,13 @@ const About = () => {
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
               Our revered Guru is an enlightened Sadguru who has dedicated over three decades to the study and practice of Kundalini Sadhana. Having attained the highest states of consciousness, the Guru now shares this divine knowledge to help humanity transcend its limitations and realize its true potential.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Parama Pujya <strong>Sree Jeeveswara Yogi</strong> was born with an awakened Kundalini. At the tender age of 8, during a meditation class at school, he naturally entered into a deep state of Samadhi for four hours. From that moment onward, his heart was filled with a burning curiosity to explore the mysteries of meditation.
-            </p>
+
+            <div className="mb-8 p-6 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg max-w-4xl mx-auto">
+              <blockquote className="text-lg italic text-gray-700 mb-2">
+                "Meditation is the most natural state of mind"
+              </blockquote>
+              <div className="text-orange-600 font-semibold">- Parama Pujya Sri Jeeveswara Yogi</div>
+            </div>
 
             <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-3">Core Values</h3>

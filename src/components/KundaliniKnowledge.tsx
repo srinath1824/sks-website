@@ -98,6 +98,12 @@ const KundaliniKnowledge = () => {
           </div>
         </div>
       </div>
+      <div className="mb-8 p-6 bg-white border-l-4 border-orange-500 rounded-r-lg max-w-4xl mx-auto">
+        <blockquote className="text-lg italic text-gray-700 mb-2">
+          "There is no difference between Siva and Shakthi; Siva is Shakthi and Shakthi is Siva"
+        </blockquote>
+        <div className="text-orange-600 font-semibold">- Parama Pujya Sri Jeeveswara Yogi</div>
+      </div>
     </section>
   );
 };

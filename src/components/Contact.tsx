@@ -46,7 +46,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8 max-w-6xl w-full">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Connect With Us</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Connect With SKS</h3>
               
               <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
                 <a href="mailto:sivakundalini@gmail.com" className="flex flex-col items-center text-center min-w-[200px] hover:transform hover:scale-105 transition-transform duration-200 no-underline">
