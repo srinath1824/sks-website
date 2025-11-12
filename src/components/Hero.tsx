@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden pb-8 sm:pb-0"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden pb-8 sm:pb-6"
     >
       <div className="absolute inset-0">
         <LazyImage 
