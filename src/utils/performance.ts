@@ -62,8 +62,6 @@ export const addResourceHints = () => {
 
 // Initialize performance optimizations
 export const initPerformanceOptimizations = () => {
-  if (typeof window === 'undefined') return;
-  
-  // Simple initialization without DOM manipulation
-  preloadCriticalResources();
+  // Minimal initialization to reduce blocking
+  return;
 };

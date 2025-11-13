@@ -17,10 +17,12 @@ const Hero = () => {
     >
       <div className="absolute inset-0">
         <LazyImage 
-          src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Meditation"
+          src="/images/Level-4 Kundalini1.jpg"
+          alt="Kundalini meditation background"
           className="w-full h-full object-cover opacity-20"
           priority={true}
+          width={800}
+          height={600}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/60 via-orange-600/50 to-orange-700/60"></div>
       </div>

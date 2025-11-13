@@ -13,8 +13,14 @@ const Home = lazy(() => import(/* webpackPrefetch: true */ './components/Home'))
 const Results = lazy(() => import(/* webpackPrefetch: true */ './components/Results'));
 const Footer = lazy(() => import(/* webpackPrefetch: true */ './components/Footer'));
 
-// Minimal loading component
-const Loading = () => <div className="h-4 bg-gray-100 animate-pulse"></div>;
+// Minimal loading component to reduce blocking
+const Loading = () => (
+  <div className="min-h-screen pt-20 pb-20 bg-gradient-to-br from-orange-50 to-orange-100">
+    <div className="flex items-center justify-center h-full">
+      <div className="w-12 h-12 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+    </div>
+  </div>
+);
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -22,8 +28,17 @@ function App() {
   useEffect(() => {
     initPerformanceOptimizations();
     
-    const handleScroll = () => setShowScrollTop(window.scrollY > 300);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setShowScrollTop(window.scrollY > 300);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -45,6 +60,7 @@ function App() {
                 />
                 <Suspense fallback={<Loading />}>
                   <Home />
+                  <Footer />
                 </Suspense>
               </>
             } />
@@ -58,6 +74,7 @@ function App() {
                   />
                   <Suspense fallback={<Loading />}>
                     <Results />
+                    <Footer />
                   </Suspense>
                 </>
               } />
@@ -65,9 +82,7 @@ function App() {
               <Route path="/meditation-test-results" element={<Navigate to="/" replace />} />
             )}
           </Routes>
-          <Suspense fallback={<Loading />}>
-            <Footer />
-          </Suspense>
+
           {showScrollTop && (
             <button
               onClick={scrollToTop}
